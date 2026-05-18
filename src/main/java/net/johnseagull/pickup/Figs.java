@@ -10,7 +10,7 @@ public class Figs {
     public BooleanFig vanillaBehavior = new BooleanFig("Vanilla pickup behavior","Lets players also pick up items normally",false);
     public BooleanFig useCurrentSlot = new BooleanFig("Pickup to current slot","[If right click pickup is enabled] Picked up items will be placed in the player's main hand if empty. If this is disabled or the player has an item in their hand, it will be picked up as it would be in vanilla", true);
     public DividerFig divider1 = new DividerFig("Visual settings", ChatFormatting.WHITE,true,false,false);
-    public BooleanFig itemGlow = new BooleanFig("Item Glow","Makes the targeted item entity have a glowing effect",true);
+    public BooleanFig itemGlow = new BooleanFig("Item Glow","Makes the targeted item entity have a glowing effect",false);
     public BooleanFig itemTags = new BooleanFig("Item Tags","Shows item details (<name> x<count>) above the targeted item entity",true);
     public FloatFig overlayRange = new FloatFig("Overlay Range","The number of blocks the player will have to be within in order for glow effects/tags to display. Only effective if [Use Player's Range] is disabled",4.5f,-1f,32f);
     public BooleanFig usePlayerRange = new BooleanFig("Use Player's Range","Use the player's entity interaction range instead of the provided fixed value",true);
