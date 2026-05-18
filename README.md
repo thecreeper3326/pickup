@@ -3,7 +3,6 @@
 Pickup is a mod that lets players pick up items by right-clicking them. (or whatever their interact key is set to) It works completely server-side so any vanilla client can join. The only client-side feature is the configuration modification system, an extra system for modifying the mod's configuration while the server is running (as opposed to editing the JSON and restarting).
 
 ## Configuration
-
 ### Core mechanics
 * Enable/disable modified pickup behavior - toggles the mod's right-click-to-pick-up feature
 * Enable/disable vanilla pickup behavior - toggles Minecraft's walk-over-to-pick-up system
@@ -18,7 +17,12 @@ You can also override the default item entity's hitbox with custom dimensions. T
 * Use default range - uses the player's `EntityInteractionRange` attribute instead of the provided value
 * Pickup to current hand - instead of stacking to the player's hotbar/inventory like normal, a picked up item will be placed in the active slot of the player if it is empty
 
+### Editing configuration
+Aside from editing the JSON while the server is offline, you have a couple other options to get the mod configured if you have it installed on your client.
+1. Command - Running `pickup_config` as an admin will open a nice GUI where you can edit the config and apply it without restarting the world.
+2. ModMenu - With Mod Menu, you can access the same config GUI by opening the Mod list and clicking the configure icon.
 
+Operator permissions are required. All configuration changes are validated server-side to catch any invalid values.
 
 Coming soon to a Modrinth near you!
 
