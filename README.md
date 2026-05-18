@@ -22,7 +22,8 @@ Aside from editing the JSON while the server is offline, you have a couple other
 1. Command - Running `pickup_config` as an admin will open a nice GUI where you can edit the config and apply it without restarting the world.
 2. ModMenu - With Mod Menu, you can access the same config GUI by opening the Mod list and clicking the configure icon.
 
-Operator permissions are required. All configuration changes are validated server-side to catch any invalid values.
+Operator permissions are required. All configuration changes are validated server-side to catch any invalid values. Once again, the client mod is completely optional!
+
 
 Coming soon to a Modrinth near you!
 
