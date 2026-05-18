@@ -24,6 +24,8 @@ Aside from editing the JSON while the server is offline, you have a couple other
 
 Operator permissions are required. All configuration changes are validated server-side to catch any invalid values. Once again, the client mod is completely optional!
 
+## Prerequisites
+All you need is a version of Fabric API that is for the same minecraft version, no extra config libs.
 
 Coming soon to a Modrinth near you!
 
