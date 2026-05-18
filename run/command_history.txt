@@ -1,8 +1,0 @@
-/pickup_config
-/time set minecraft:day
-/attribute 74daa18f-07f6-4170-a5b1-3f6f80af33c3 minecraft:armor
-/attribute 74daa18f-07f6-4170-a5b1-3f6f80af33c3 minecraft:armor get
-/attribute 74daa18f-07f6-4170-a5b1-3f6f80af33c3 minecraft:scale get
-/attribute 74daa18f-07f6-4170-a5b1-3f6f80af33c3 minecraft:scale modifier add 12
-/attribute 74daa18f-07f6-4170-a5b1-3f6f80af33c3 minecraft:scale modifier add 1
-/attribute 74daa18f-07f6-4170-a5b1-3f6f80af33c3 minecraft:scale base get

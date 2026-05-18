@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "pickup",
-  "version": "0.1+26.1",
+  "version": "1.0+26.1",
   "name": "Pickup",
   "description": "Pick up items using right click",
   "authors": ["TheCreeper3326 [John Seagull]"],
