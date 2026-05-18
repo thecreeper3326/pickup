@@ -1,0 +1,16 @@
+{
+  "stats": {
+    "minecraft:dropped": {
+      "minecraft:stone": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 311,
+      "minecraft:total_world_time": 336,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 311,
+      "minecraft:time_since_death": 311,
+      "minecraft:drop": 1
+    }
+  },
+  "DataVersion": 4786
+}

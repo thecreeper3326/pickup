@@ -1,0 +1,18 @@
+{
+  "stats": {
+    "minecraft:dropped": {
+      "minecraft:birch_stairs": 2
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 375,
+      "minecraft:walk_one_cm": 738,
+      "minecraft:total_world_time": 443,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 375,
+      "minecraft:jump": 2,
+      "minecraft:time_since_death": 375,
+      "minecraft:drop": 2
+    }
+  },
+  "DataVersion": 4786
+}

@@ -1,0 +1,29 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:stone": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:dirt": 20,
+      "minecraft:redstone_block": 1,
+      "minecraft:cobblestone": 11,
+      "minecraft:white_concrete": 3,
+      "minecraft:stone": 1,
+      "minecraft:air": 0
+    },
+    "minecraft:dropped": {
+      "minecraft:white_concrete": 2
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 601,
+      "minecraft:walk_one_cm": 1074,
+      "minecraft:total_world_time": 646,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 601,
+      "minecraft:jump": 2,
+      "minecraft:time_since_death": 601,
+      "minecraft:drop": 2
+    }
+  },
+  "DataVersion": 4786
+}

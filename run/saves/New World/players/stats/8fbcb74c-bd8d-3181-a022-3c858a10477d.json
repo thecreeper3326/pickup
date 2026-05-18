@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "minecraft:dropped": {
+      "minecraft:stripped_jungle_log": 2
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 540,
+      "minecraft:walk_one_cm": 681,
+      "minecraft:total_world_time": 580,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 540,
+      "minecraft:time_since_death": 540,
+      "minecraft:drop": 2
+    },
+    "minecraft:picked_up": {
+      "minecraft:air": 0
+    }
+  },
+  "DataVersion": 4786
+}

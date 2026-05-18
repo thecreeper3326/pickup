@@ -1,0 +1,27 @@
+{
+  "stats": {
+    "minecraft:dropped": {
+      "minecraft:black_concrete": 1,
+      "minecraft:white_concrete": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:white_concrete": 177,
+      "minecraft:black_concrete": 95,
+      "minecraft:stone": 307,
+      "minecraft:rotten_flesh": 60
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 169,
+      "minecraft:time_since_rest": 584,
+      "minecraft:walk_one_cm": 1318,
+      "minecraft:total_world_time": 709,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 785,
+      "minecraft:play_time": 584,
+      "minecraft:jump": 4,
+      "minecraft:time_since_death": 584,
+      "minecraft:drop": 2
+    }
+  },
+  "DataVersion": 4786
+}

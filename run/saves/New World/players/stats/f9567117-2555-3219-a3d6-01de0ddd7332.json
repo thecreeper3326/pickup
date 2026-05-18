@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "minecraft:dropped": {
+      "minecraft:dirt": 30
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 74,
+      "minecraft:walk_one_cm": 1133,
+      "minecraft:total_world_time": 257,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 74,
+      "minecraft:time_since_death": 74,
+      "minecraft:drop": 30
+    },
+    "minecraft:used": {
+      "minecraft:dirt": 1
+    }
+  },
+  "DataVersion": 4786
+}

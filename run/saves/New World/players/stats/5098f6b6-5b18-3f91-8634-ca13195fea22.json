@@ -1,0 +1,19 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:stone": 5
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 477,
+      "minecraft:total_world_time": 587,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 477,
+      "minecraft:time_since_death": 477,
+      "minecraft:drop": 5
+    },
+    "minecraft:dropped": {
+      "minecraft:stone": 5
+    }
+  },
+  "DataVersion": 4786
+}

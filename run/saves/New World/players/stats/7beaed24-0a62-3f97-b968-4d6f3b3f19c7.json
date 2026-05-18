@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:tnt": 1
+    },
+    "minecraft:dropped": {
+      "minecraft:tnt": 2
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 671,
+      "minecraft:walk_one_cm": 570,
+      "minecraft:total_world_time": 4773,
+      "minecraft:leave_game": 1,
+      "minecraft:play_time": 671,
+      "minecraft:time_since_death": 671,
+      "minecraft:drop": 2
+    }
+  },
+  "DataVersion": 4786
+}

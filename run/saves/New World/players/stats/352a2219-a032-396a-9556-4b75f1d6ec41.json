@@ -1,0 +1,18 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 188,
+      "minecraft:time_since_rest": 208,
+      "minecraft:walk_one_cm": 91,
+      "minecraft:total_world_time": 239,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 59,
+      "minecraft:play_time": 208,
+      "minecraft:time_since_death": 208
+    },
+    "minecraft:used": {
+      "minecraft:wolf_spawn_egg": 1
+    }
+  },
+  "DataVersion": 4786
+}
