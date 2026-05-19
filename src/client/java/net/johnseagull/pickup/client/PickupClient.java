@@ -9,6 +9,6 @@ public class PickupClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         FigManagerClient figManager = new FigManagerClient();
-        figManager.init(Figs.instance,0.5f);
+        figManager.init(Figs.instance,0.48f);
     }
 }

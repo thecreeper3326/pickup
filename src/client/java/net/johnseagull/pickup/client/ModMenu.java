@@ -9,7 +9,7 @@ import net.minecraft.network.chat.Component;
 public class ModMenu implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return p -> new FigScreen<>(Component.literal("Pickup"), 0.5f, FigManager.FIGS, p);
+        return p -> new FigScreen<>(Component.literal("Pickup"), 0.48f, FigManager.FIGS, p);
     }
 }
 

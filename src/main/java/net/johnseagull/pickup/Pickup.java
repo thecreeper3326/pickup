@@ -5,6 +5,8 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.particles.ItemParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -31,12 +33,25 @@ public class Pickup implements ModInitializer {
     @Override
     public void onInitialize() {
         FigManager figManager = new FigManager();
-        figManager.init("pickup", "1.1", Figs.instance);
+        figManager.init("pickup", "1.2", Figs.instance);
         UseEntityCallback.EVENT.register((player, level, hand, entity, hitResult) -> {
             Figs f = (Figs) FigManager.FIGS;
             if (hand.equals(InteractionHand.MAIN_HAND) && f.newBehavior.value) {
                 if (entity instanceof ItemEntity item) {
                     player.playSound(SoundEvents.ITEM_PICKUP);
+                    if (f.enableParticles.value) {
+                        for (int i = 0; i < f.particles.value; i++) {
+                            level.addParticle(
+                                    new ItemParticleOption(ParticleTypes.ITEM, item.getItem().getItem()),
+                                    true, true,
+                                    item.getX(), item.getY() + (item.getBbHeight() / 2), item.getZ(),
+                                    (Math.random() - 0.5) * 0.2,
+                                    Math.random() * 0.2,
+                                    (Math.random() - 0.5) * 0.2
+                            );
+                        }
+                    }
+                    player.onItemPickup(item);
                     if (player.getMainHandItem().isEmpty() && f.useCurrentSlot.value) {
                         entity.discard();
                         if (player.getInventory().hasAnyOf(Set.of(item.getItem().getItem()))) {
@@ -88,13 +103,19 @@ public class Pickup implements ModInitializer {
                         ItemEntity.class,
                         player.getBoundingBox().expandTowards(player.getLookAngle().scale(range))
                 );
+                float cd = 99999;
                 for (ItemEntity item : items) {
                     ((ItemEntityInterface) item).pickup$setPickup(!f.newBehavior.value);
                     ((ItemEntityInterface) item).pickup$setBigHitbox(f.enableModifiedHitbox.value);
                     item.refreshDimensions();
 
-                    if (!item.getBoundingBox().clip(eyePos, newEnd).equals(Optional.empty()) && coolITem == null) {
-                        coolITem = item;
+                    if (!item.getBoundingBox().clip(eyePos, newEnd).equals(Optional.empty())) {
+
+                        float dist = (float) item.getBoundingBox().clip(eyePos,newEnd).get().distanceTo(eyePos);
+                        if (dist < cd) {
+                            cd = dist;
+                            coolITem = item;
+                        }
                     } else {
                         item.setCustomName(Component.literal(""));
                         item.setCustomNameVisible(false);
