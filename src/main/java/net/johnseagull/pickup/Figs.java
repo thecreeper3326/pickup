@@ -15,7 +15,7 @@ public class Figs {
     public FloatFig overlayRange = new FloatFig("Overlay Range","The number of blocks the player will have to be within in order for glow effects/tags to display. Only effective if [Use Player's Range] is disabled",4.5f,-1f,32f);
     public BooleanFig usePlayerRange = new BooleanFig("Use Player's Range","Use the player's entity interaction range instead of the provided fixed value",true);
     public DividerFig divider2 = new DividerFig("Hitbox settings",ChatFormatting.WHITE,true,false,false);
-    public BooleanFig enableModifiedHitbox = new BooleanFig("Modified Hitbox","Modify hitboxes of item entities to make interaction easier",true);
+    public BooleanFig enableModifiedHitbox = new BooleanFig("Modified Hitbox","Modify hitboxes of item entities to make interaction easier",false);
     public FloatFig hitboxWidth = new FloatFig("Width [Diameter]","Diameter of the hitbox. Default 0.25F",0.3f,0.1f,1f);
     public FloatFig hitboxHeight = new FloatFig("Height","Height of the hitbox. Default 0.25F",0.5f,0.1f,1f);
 }
