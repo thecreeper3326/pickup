@@ -32,6 +32,7 @@ public class Pickup implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        LOGGER.info("Initializing Pickup");
         FigManager figManager = new FigManager();
         figManager.init("pickup", "1.2", Figs.instance);
         UseEntityCallback.EVENT.register((player, level, hand, entity, hitResult) -> {
@@ -69,10 +70,10 @@ public class Pickup implements ModInitializer {
 
                     return InteractionResult.SUCCESS;
                 } else {
-                    return InteractionResult.CONSUME;
+                    return InteractionResult.PASS;
                 }
             } else {
-                return InteractionResult.CONSUME;
+                return InteractionResult.PASS;
             }
         });
         ServerTickEvents.END_SERVER_TICK.register(server -> {
