@@ -27,12 +27,13 @@ import java.util.Set;
 public class Pickup implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("Pickup");
     private static int c = 0;
+
     @Override
     public void onInitialize() {
         FigManager figManager = new FigManager();
-        figManager.init("pickup","1.0", Figs.instance);
+        figManager.init("pickup", "1.0", Figs.instance);
         UseEntityCallback.EVENT.register((player, level, hand, entity, hitResult) -> {
-            Figs f = (Figs)FigManager.FIGS;
+            Figs f = (Figs) FigManager.FIGS;
             if (hand.equals(InteractionHand.MAIN_HAND) && f.newBehavior.value) {
                 if (entity instanceof ItemEntity item) {
                     player.playSound(SoundEvents.ITEM_PICKUP);
@@ -68,17 +69,18 @@ public class Pickup implements ModInitializer {
                 }
                 Vec3 eyePos = player.getEyePosition();
                 Vec3 end = eyePos.add(player.getLookAngle().scale(range));
-
-
-                BlockHitResult blockHit = player.level().clip(new ClipContext(
+                BlockHitResult hit = player.level().clip(new ClipContext(
                         eyePos, end,
                         ClipContext.Block.COLLIDER,
                         ClipContext.Fluid.ANY,
                         player
                 ));
                 Vec3 newEnd;
-                if (blockHit.getType() == HitResult.Type.BLOCK) {
-                    newEnd = blockHit.getLocation();
+                ItemEntity coolITem = null;
+                if (hit.getType() == HitResult.Type.BLOCK) {
+                    newEnd = hit.getLocation();
+                } else if (hit.getType() == HitResult.Type.ENTITY) {
+                    newEnd = hit.getLocation();
                 } else {
                     newEnd = end;
                 }
@@ -86,13 +88,21 @@ public class Pickup implements ModInitializer {
                         ItemEntity.class,
                         player.getBoundingBox().expandTowards(player.getLookAngle().scale(range))
                 );
-
                 for (ItemEntity item : items) {
                     ((ItemEntityInterface) item).pickup$setPickup(!f.newBehavior.value);
                     ((ItemEntityInterface) item).pickup$setBigHitbox(f.enableModifiedHitbox.value);
                     item.refreshDimensions();
 
-                    if (!item.getBoundingBox().clip(eyePos, newEnd).equals(Optional.empty())) {
+                    if (!item.getBoundingBox().clip(eyePos, newEnd).equals(Optional.empty()) && coolITem == null) {
+                        coolITem = item;
+                    } else {
+                        item.setCustomName(Component.literal(""));
+                        item.setCustomNameVisible(false);
+                        item.setGlowingTag(false);
+                    }
+                }
+                for (ItemEntity item : items) {
+                    if (item == coolITem) {
                         if (f.itemTags.value) {
                             Component name = Component.empty()
                                     .append(item.getItem().getHoverName())
@@ -103,7 +113,7 @@ public class Pickup implements ModInitializer {
                         if (f.itemGlow.value) {
                             item.setGlowingTag(true);
                         }
-                    } else {
+                    }else {
                         item.setCustomName(Component.literal(""));
                         item.setCustomNameVisible(false);
                         item.setGlowingTag(false);
@@ -111,7 +121,5 @@ public class Pickup implements ModInitializer {
                 }
             }
         });
-
     }
-
 }
