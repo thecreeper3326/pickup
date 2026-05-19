@@ -31,7 +31,7 @@ public class Pickup implements ModInitializer {
     @Override
     public void onInitialize() {
         FigManager figManager = new FigManager();
-        figManager.init("pickup", "1.0", Figs.instance);
+        figManager.init("pickup", "1.1", Figs.instance);
         UseEntityCallback.EVENT.register((player, level, hand, entity, hitResult) -> {
             Figs f = (Figs) FigManager.FIGS;
             if (hand.equals(InteractionHand.MAIN_HAND) && f.newBehavior.value) {
